@@ -1,0 +1,88 @@
+/* IE6 stylesheet, overwrites main styles */
+h1 {
+	font-size: 17px;
+}
+#nav li.first {
+	margin: 0 50px -100px 0;
+	left: 30px;
+}
+#c_mask {
+    background: transparent;
+}
+#c_links {
+    z-index: 3000000;
+}
+#c_links a {
+	float: left;
+	display: block;
+	position: relative;
+	padding: 10px 15px 8px;
+	margin: 0 5px 0 0;
+	background: transparent url(imgs/bg_dark_transparent.png) repeat;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    color: white;
+    text-transform: uppercase;
+	white-space: nowrap;
+    z-index: 30000302;
+}
+#c_links a:hover {
+	color: black;
+	background: none white;
+	text-decoration: none;
+}
+#c_links a.hidden {
+	display: none;
+}
+#c_links a img {
+	border: none;
+	margin: 0 -10px 0 10px;
+}
+#c_nav {
+    z-index: 3011040;
+}
+#c_nav img {
+	position: relative;
+}
+
+/* content area */
+#sidebar h4 {
+	display: block;
+	width: 150px;
+}
+#sidebar h4 img {
+	right: -10px;
+}
+.subnav li.active a {
+	background: transparent url(imgs/arrow_down.gif) no-repeat right center;
+}
+.subnav li.active a.snav.nochild {
+	background: transparent url(imgs/arrow_right_white.gif) no-repeat right center;
+}
+.subnav li a {
+	background: transparent url(imgs/arrow_right.gif) no-repeat right center;
+}
+.subnav li li {
+	background: #515965 url(imgs/bg_subsub.png) 5px center no-repeat;
+}
+.subnav li li.sel, .subnav li li.active, .subnav li li.current_page_item , .subnav li li.current_page_ancestor, .subnav li li.current_page_parent {
+	background: #515965 url(imgs/bg_subsub_hover.png) 5px center no-repeat;
+}
+.subnav li li a:hover {
+	background: #515965 url(imgs/bg_subsub_hover.png) 5px center no-repeat;
+	margin-left: -8px;
+	padding-left: 28px;
+}
+/* end content area */
+
+/* footer */
+#newsfeeds h4 {
+	font-size: 11px;
+	line-height: 11px;
+}
+#newsfeeds {
+	line-height: 11px;
+	margin: 0;
+	width: 900px;
+}
+/* end footer */
