@@ -30,11 +30,21 @@ class Walker_Page_GGP extends Walker_Page {
 	 * @param string $output Passed by reference. Used to append additional content.
 	 * @return null Null on failure with no changes to parameters.
 	 */
-	public function display_element( $element, &$children_elements, $max_depth, $depth=0, $args, &$output ) {
-		if ($depth == 0) {
-			$this->element_count = count($children_elements[$element->ID]);
+	public function display_element( $element, &$children_elements,
+									 $max_depth, $depth = 0, $args, &$output ) {
+		if ( $depth === 0 ) {
+			// guard against undefined key or non-array
+			if ( isset( $children_elements[ $element->ID ] )
+				&& is_array( $children_elements[ $element->ID ] ) ) {
+				$this->element_count = count( $children_elements[ $element->ID ] );
+			} else {
+				$this->element_count = 0;
+			}
 		}
-		parent::display_element( $element, $children_elements, $max_depth, $depth, $args, $output );
+
+		// now safe to call the parent
+		parent::display_element( $element, $children_elements,
+			$max_depth, $depth, $args, $output );
 	}
 
 	/**
